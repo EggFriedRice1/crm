@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+
+    --light: #F9F9F9;
+    --blue: #3C91E6;
+    --light-blue: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #342E37;
+    --red: #DB504A;
+    --yellow: #FFCE26;
+    --light-yellow: #FFF2C6;
+    --orange: #FD7238;
+    --light-orange: #FFE0D3;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #FFF2C6;
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN */
+#content main {
+    width: 100%;
+    padding: 36px 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+#content main .box-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
+    margin-top: 36px;
+}
+
+#content main .box-info li {
+    padding: 50px;
+    background: #f9f9f9;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+}
+
+#content main .box-info li .bx {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    background: #eee;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+}
+.loyalty-card {
+    max-width: 400px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    background-color: #ffce26;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loyalty-card .header {
+    background-color: #FFF2C6;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+.loyalty-card .header h2 {
+    margin: 0;
+}
+
+.loyalty-card  h3 {
+font-size: 23px;
+}
+
+.loyalty-card .loyalty-picture{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.loyalty-card .barcode-container{
+    margin-top: 10px;
+    background-color: white;
+    
+}
+.loyalty-card .barcode-container .barcode{
+    max-width: 100%;
+    margin-top: 5px;
+}
+
+/* MAIN */
+/* CONTENT */
+
+
+@media screen and (max-width: 768px) {
+    #content {
+        position: relative;
+        width: calc(100% - 60px);
+    }
+
+    #content nav .nav-link {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #content nav form .form-input input {
+        display: none;
+    }
+
+    #content nav form .form-input button {
+        width: auto;
+        height: auto;
+        background: transparent;
+        border-radius: none;
+        color: #342e37;
+    }
+
+    #content nav form.show .form-input input {
+        display: block;
+    }
+
+    #content nav form.show .form-input button {
+        width: 36px;
+        height: 100%;
+        border-radius: 0 36px 36px 0;
+        color: #f9f9f9;
+        background: #db504a;
+    }
+
+    #content nav form.show ~ .notification,
+    #content nav form.show ~ .profile {
+        display: none;
+    }
+
+    .update-profile form .flex {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .update-profile form .flex .inputBox {
+        width: 100%;
+    }
+}
